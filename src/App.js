@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+//import Split from './composition/Split';
+import './index.css';
+import Tooltip from './Tooltip.js';
+
+const firstTooltip = (
+  <Tooltip color='hotpink' message='tooltip message' ps='Hi'>
+   sdlfkjfdf
+  </Tooltip>
+)
+const secondTooltip = (
+  <Tooltip color='#126BCC' message='another tooltip message'>
+    officiis
+  </Tooltip>
+)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className='App'>
+      <p>Hello {firstTooltip} World</p>
+      <Tooltip message='one more tooltip message'>
+          Necessitatibus?
+      </Tooltip>
+      <p>I am operating {secondTooltip} inside of react</p>
+      <p>Aren't I cool?</p>
+    </main>
   );
 }
 
